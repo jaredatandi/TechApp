@@ -115,6 +115,7 @@
     transition: all 0.5s ease;
     height: 50vh;
     z-index: -1;
+    background: #131313;
   }
 
   .navbar__menu.active {
@@ -126,8 +127,10 @@
     height: 50vh;
     font-size: 1.6rem;
   }
-
-  navbar__toggle .bar {
+  #navbar__logo {
+    padding-left: 25px;
+  }
+  .navbar__toggle .bar {
     width: 25px;
     height: 3px;
     margin: 5px auto;
@@ -153,5 +156,32 @@
     transform: translate(5%, 20%);
   }
 
-  .navbar__btn;
+  .navbar__btn {
+    padding-bottom: 2rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+    margin: 0;
+  }
+
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
